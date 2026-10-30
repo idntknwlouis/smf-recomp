@@ -149,6 +149,8 @@ process.on("SIGTERM", () => void core.logger.error("Received SIGTERM signal"))
 
 async function doTheThing() {
 
+	const startedDate = DateTime.now()
+	
 	if (core.config.reportErrors) {
 		await core.logger.info("Initialising error reporting")
 
